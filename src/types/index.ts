@@ -19,4 +19,6 @@ export type TExpenseContext = {
   removeExpense: (id: string) => void;
   editExpense: (id: string, title: string, category: TCategory) => void;
   clearExpenses: () => void;
+  budget: number;
+  setBudget: React.Dispatch<React.SetStateAction<number>>;
 };

@@ -10,6 +10,7 @@ export const ExpenseContext = createContext<TExpenseContext | undefined>(
 export const ExpenseProvider = ({children}: {children: React.ReactNode}) => {
   const key = 'expense';
   const [expenses, setExpenses] = useLocalStorage(key, []);
+  const [budget, setBudget] = useLocalStorage('monthlyBudget', 1000);
 
   const addExpense = (
     title: string,
@@ -50,6 +51,8 @@ export const ExpenseProvider = ({children}: {children: React.ReactNode}) => {
     editExpense,
     removeExpense,
     clearExpenses,
+    budget,
+    setBudget,
   };
 
   return (
