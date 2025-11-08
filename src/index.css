@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@layer base {
+  /* Custom base styles can go here */
+  body {
+    @apply bg-orange-50 m-0 p-0 box-border;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+  }
+  .contain {
+    @apply max-w-7xl mx-auto px-4;
+  }
+  .input {
+    @apply border border-gray-300 rounded-md p-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 flex-grow;
+  }
+}
