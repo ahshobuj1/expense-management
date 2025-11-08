@@ -14,12 +14,10 @@ const ExpenseList = () => {
       ? expenses
       : expenses.filter((e) => e.category === categoryFilter);
 
-  // Track which expense is being edited and its form state
-
   return (
     <div className="my-6">
       <div className="mb-4 flex gap-2">
-        {['all', 'Food', 'Utilities', 'Others'].map((c) => (
+        {['all', 'Food', 'Transport', 'Utilities', 'Others'].map((c) => (
           <button
             key={c}
             onClick={() => setCategoryFilter(c)}

@@ -5,7 +5,6 @@ import {toast} from 'sonner';
 
 const ExpenseItem = ({expense}: {expense: TExpense}) => {
   const {editExpense, removeExpense} = useExpense();
-
   const [isEditing, setIsEditing] = useState(false);
 
   const [form, setForm] = useState({
